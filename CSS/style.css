@@ -15,11 +15,12 @@ h1 {
     width: 500px;
     border: 1px solid #000;
     margin: auto;
+    overflow-y: hidden;
 }
 
 .square {
 	border: 0px solid #000;
 	display: inline-block;
-    white-space: no-wrap;
-    float: left;
+  white-space: no-wrap;
+  float: left;
 }
