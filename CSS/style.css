@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+}
+
+h1 {
+    display: block;
+    margin: 20px;
+    font-family: arial, sans-serif;
+    text-align: center;
+}
+
+.grid {
+    display: inline-block;
+    height: 500px;
+    width: 500px;
+}
