@@ -28,6 +28,7 @@ pen();
 function reset() {
 	$('#reset').click(function() {
   	$('.square').css('background-color', "#fff");
+    pen();
   });
 }
 reset();
@@ -41,5 +42,21 @@ function resize() {
   });
 }
 resize();
+
+
+function rainbow() {
+$("#colored").click(function(){
+	$('.square').mouseenter(function() {
+	    var letters = '0123456789ABCDEF';
+	    var color = '#';
+	    for (var i = 0; i < 6; i++ ) {
+	        color += letters[Math.floor(Math.random() * 16)];
+	    }
+	$(this).css({'background-color': color});
+	$(this).css({'border-color': color});
+	});
+});
+}
+rainbow();
 
 });
