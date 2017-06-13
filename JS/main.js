@@ -10,8 +10,8 @@ function createGrid() {
 	}
 
 	$('.square').css({
-		'height' : (500 / gridSize) + "px",
-		'width' : (500 / gridSize) +'px',
+		'height' : ((500 / gridSize)-2) + "px",
+		'width' : ((500 / gridSize)-2) +'px',
 	});
 }
 createGrid();  
@@ -19,7 +19,10 @@ createGrid();
 
 function pen() {
   $('.square').mouseenter(function() {
-    $(this).css('background-color', "#000");
+    $(this).css({
+    	'background-color': "#000",
+      'border-color': '#000',
+    });
    });
  }
 pen();
@@ -27,7 +30,10 @@ pen();
 
 function reset() {
 	$('#reset').click(function() {
-  	$('.square').css('background-color', "#fff");
+  	$('.square').css({
+    	'background-color': "#fff",
+      'border-color': '#fff',
+      });
     pen();
   });
 }
@@ -46,7 +52,7 @@ resize();
 
 function rainbow() {
 $("#colored").click(function(){
-	$('.square').mouseenter(function() {
+	$('.square').mouseenter(function() {;;
 	    var letters = '0123456789ABCDEF';
 	    var color = '#';
 	    for (var i = 0; i < 6; i++ ) {
@@ -58,5 +64,10 @@ $("#colored").click(function(){
 });
 }
 rainbow();
+
+//creates a toggle grid btn
+$('#togGrid').click(function() {
+ $('.square').toggleClass('grid');
+});
 
 });

@@ -19,8 +19,15 @@ h1 {
 }
 
 .square {
-	border: 0px solid #000;
+	border: 1px solid #fff;
+    background-color: #fff;
 	display: inline-block;
-  white-space: no-wrap;
-  float: left;
+    float: left;
+}
+
+.grid {
+    border: 1px dotted #aaa;
+    background-color: #fff;
+	display: inline-block;
+    float: left;
 }
