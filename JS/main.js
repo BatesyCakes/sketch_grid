@@ -42,7 +42,7 @@ reset();
 
 function resize() {
 	$('#size').click(function() {
-  	gridSize = (prompt('How fine would you like your brush? Enter a number from 1-100.'));
+  	gridSize = (prompt('How fine would you like your grid? Enter a number from 1-100.'));
    createGrid();
    pen();
   });
@@ -66,8 +66,10 @@ $("#colored").click(function(){
 rainbow();
 
 //creates a toggle grid btn
+function togGrid(){
 $('#togGrid').click(function() {
  $('.square').toggleClass('grid');
 });
-
+}
+togGrid();
 });
